@@ -1,9 +1,10 @@
 ##Usage
 
-Download .zip archive, extract it and run:
+Run this command in terminal:
 
 ````
-$ cd foxstone-test-task
+$ git clone https://github.com/drboboev/test_person-cars.git project_dir
+$ cd project_dir
 $ docker-compose up -d --build
 ````
 
