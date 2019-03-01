@@ -23,7 +23,6 @@ $ composer install
 
 Now, you need make migrations with doctrine:
 ````
-$ php bin/console make:migrations
 $ php bin/console doctrine:migrations:migrate
 ````
 
