@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Test Task!{% endblock %}</title>
+        {% block stylesheets %}
+        <style>
+            .person {
+                color: #333;
+                font-weight: bold;
+            }
+
+            .person .name {
+                font-size: 1.2em;
+            }
+
+            .person span {
+                font-weight: normal;
+            }
+        </style>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="person">
+            <div>Name: <span>{{ person.name }}</span></div>
+            <div>Age: <span>{{ person.age }}</span></div>
+            <div>Weight: <span>{{ person.weight }}</span></div>
+        </div>
+        <div>
+            <h4>Car List:</h4>
+            <ul>
+                {% for item in person.cars %}
+                    <li>Model: {{ item.title }} :: Price: {{ item.price }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+        {% endblock %}
+    </body>
+</html>
